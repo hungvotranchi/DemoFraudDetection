@@ -8,7 +8,7 @@ def root():
     return {"message:": "Hello World"}
 
 
-@app.post("/ask")
+@app.post("/upload")
 def upload_file(file: UploadFile = File(...)):
     testdata = pd.read_csv(file.file)
     file.file.close()
